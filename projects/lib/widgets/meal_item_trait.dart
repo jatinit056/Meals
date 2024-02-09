@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+class MealItemTrait extends StatelessWidget {
+  const MealItemTrait({super.key, required this.icon, required this.labbel});
+
+  final IconData icon;
+  final String labbel;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(
+          icon,
+          size: 17,
+          color: Colors.white,
+        ),
+        const SizedBox(width: 6),
+        Text(
+          labbel,
+          style: const TextStyle(color: Colors.white),
+        ),
+
+      ],
+    );
+  }
+}
